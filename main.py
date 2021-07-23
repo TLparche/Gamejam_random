@@ -1,16 +1,13 @@
-# This is a sample Python script.
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+read = open('제시어.txt', 'r', encoding='utf-8').read()
+list = []
+list = read.split(" ")
+print(list)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+for i in range(1, 7, 1):
+    print(i, "조의 제시어는", end=' ')
+    for i in range(3):
+        data = list.pop(random.randrange(0, len(list)))
+        print(data, end=' ')
+    print("입니다.")
